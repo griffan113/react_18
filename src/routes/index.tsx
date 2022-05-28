@@ -1,14 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from '../App';
+import AppModule from '../modules/App/App.module';
+import AuthModule from '../modules/Auth/Auth.module';
 
-const AppRouter: React.FC = () => (
+const Routes: React.FC = () => (
   <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-    </Routes>
+    <AppModule />
+    <AuthModule />
   </BrowserRouter>
 );
 
-export default AppRouter;
+export default Routes;
