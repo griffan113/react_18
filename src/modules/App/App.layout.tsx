@@ -1,14 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Flex, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+
+import Header from './components/Header';
 
 const AppLayout: React.FC = () => (
-  <>
-    <Flex justify="center" alignItems="center">
-      <Text>AppLayout Works!</Text>
-    </Flex>
+  <Box height="100vh">
+    <Header />
     <Outlet />
-  </>
+  </Box>
 );
 
 export default AppLayout;

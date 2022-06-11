@@ -5,13 +5,7 @@
     "jest": true,
     "node": true
   },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-    "airbnb"
-  ],
+  "extends": ["plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:prettier/recommended", "eslint:recommended", "airbnb"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -37,6 +31,7 @@
   },
   "rules": {
     "max-len": "off",
+    "object-curly-newline": "off",
     "arrow-parens": "off",
     "react/function-component-definition": "off",
     "react/react-in-jsx-scope": "off",
