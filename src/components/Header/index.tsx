@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   return (
     <Flex align="center" justify="space-between" p="5">
       <Text fontSize="1.5rem" fontWeight="bold">
-        My Notes
+        My Things
       </Text>
       <IconButton aria-label="Toggle Theme" icon={colorMode === 'dark' ? <BsSunFill /> : <BsFillMoonFill />} onClick={toggleColorMode} />
     </Flex>
