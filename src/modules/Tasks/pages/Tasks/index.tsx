@@ -9,11 +9,33 @@ const Tasks: React.FC = () => (
     <DragDropContext onDragEnd={() => {}}>
       <Droppable droppableId="droppable">
         {droppableProvided => (
-          <Box className="droppable" {...droppableProvided.droppableProps} ref={droppableProvided.innerRef}>
+          <Box
+            borderRadius="md"
+            p="10"
+            bg="gray.800"
+            className="droppable"
+            {...droppableProvided.droppableProps}
+            ref={droppableProvided.innerRef}
+          >
             {tasks.map((task, index) => (
               <Draggable key={task.id} draggableId={task.id} index={index}>
                 {draggableProvided => (
-                  <Box ref={draggableProvided.innerRef} {...draggableProvided.draggableProps} {...draggableProvided.dragHandleProps}>
+                  <Box
+                    m="2"
+                    display="flex"
+                    flexDirection="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    h="7rem"
+                    w="10rem"
+                    borderRadius="base"
+                    borderWidth="1px"
+                    border="md"
+                    borderColor="gray.300"
+                    ref={draggableProvided.innerRef}
+                    {...draggableProvided.draggableProps}
+                    {...draggableProvided.dragHandleProps}
+                  >
                     <Text>{task.title}</Text>
                   </Box>
                 )}
